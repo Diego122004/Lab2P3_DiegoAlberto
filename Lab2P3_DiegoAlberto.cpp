@@ -2,10 +2,12 @@
 //
 
 #include <iostream>
+#include <locale>
 using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "sapanish");
     int opcion;
     do {
         cout << "MENU" << endl;
@@ -14,46 +16,15 @@ int main()
         cout << "2. Números amigables" << endl;
         cout << "3. Serie de Fibonacci" << endl;
         cin >> opcion;
-        switch (opcion != 0)
+        switch (opcion)
         {
         case 1: {
             int n;
             int contDePrimos = 0;
             int contDeDiv = 0;
-            cout << "Ingrese un valor de n mayor a 1" << " ";
-            cin >> n;
-            while ( n != 0 && n >= 1) {
-              
-                if (n == 0) {
-                    cout << "El programa a terminado";
-                    break;
-                }
-               
 
-                for (int i = 2; i < n; i++) {
-
-                    for (int j = 1; j <= i; j++) {
-
-                        if (i % j == 0) {
-                            contDeDiv++;
-                        }
-                    }
-                    if (contDeDiv == 2) {
-                        contDePrimos++;
-                    }
-                    contDeDiv = 0;
-                }
-
-                //cout << "El numero de primos en" <<" " << n << "Es " << " " << contDePrimos;
-
-
-
-                cout << "El numero de primos entre" << " " << "0" << " " << " y" << " " << n << " " << "es :" << contDePrimos << "\n";
-              
-            };
-
-           /* do {
-                cout << "Ingrese un valor de n mayor a 1"<<" ";
+            do {
+                cout << "Ingrese un valor de n mayor a 1"<< " ";
                 cin >> n;
 
                 for (int i = 2; i < n; i++) {
@@ -74,30 +45,31 @@ int main()
 
 
 
-                cout << "El numero de primos entre" << " " << "0" << " " << " y" << " " << n << " " << "es :" << contDePrimos << "\n";
+                cout << "El numero de primos entre" << " " << "0" << " " << " y" << " " << n << " " << "Es " << contDePrimos << "\n";
 
                 cout << "Ingrese un valor de n mayor a 1\n";
                 cin >> n;
 
-            } while (n <= 1 && n != 0 && n >= 1);*/
+            } while (n != 0 && n >= 1);
 
-           /* if (n == 0) {
+            if (n == 0) {
                 cout << "El programa a terminado";
+                break;
             }
-            break;*/
+          
         };
               break;
 
         case 2: {
             int n;
             int m;
-            int suman =0;
-            int sumam;
-            cout << "ingrese el primer número:" << " " << endl;
+            int suman =0 ;
+            int sumam =0;
+            cout << "ingrese el primer número:" << " ";
             cin >> n;
-            cout << "ingrese el segundo número:" << " " << endl;
+            cout << "ingrese el segundo número:" << " ";
             cin >> m;
-            for (int i = 2; i < n; i++) {
+            for (int i = 1; i < n; i++) {
 
                 for (int j = 1; j <= i; j++) {
                 
@@ -105,15 +77,44 @@ int main()
                     
                         suman += j;
                     }
-                    cout << suman << endl;
+                   // cout << suman << endl;
                 };
             };
-            
+            for (int a = 1; a < m; a++) {
 
+                for (int b = 1; b <= a; b++) {
+
+                    if (a % b == 0) {
+
+                        sumam += b;
+                    }
+                    // cout << suman << endl;
+                };
+            };
+            if (suman == sumam) {
+
+                cout << "Son amigables" << endl;
+            }
+            else {
+                cout << "No nos amigables";
+
+            };
 
         };
               break;
         case 3: {
+            int num;
+            int fibo;
+            cout << "Ingrese el numero" << " ";
+            cin >> num;
+                for (int i = 1; i = num; i++) {
+                    cout << i;
+                    for (int j = 0; i <= i; j++) {
+                        cout << j;
+                        fibo = i + j;
+                    };
+                };
+
            
         };
               break;
