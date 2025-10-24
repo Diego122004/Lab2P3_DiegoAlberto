@@ -31,11 +31,11 @@ int main()
 
                     for (int j = 1; j <= i; j++) {
 
-                        if (i % j == 0) {
+                        if (i % j == 0) {// verifica cuantos divisores tiene
                             contDeDiv++;
                         }
                     }
-                    if (contDeDiv == 2) {
+                    if (contDeDiv == 2) {//verifica que sean num primos
                         contDePrimos++;
                     }
                     contDeDiv = 0;
@@ -69,27 +69,24 @@ int main()
             cin >> n;
             cout << "ingrese el segundo número:" << " ";
             cin >> m;
-            for (int i = 1; i < n; i++) {
 
-                for (int j = 1; j <= i; j++) {
-                
-                    if (i%j == 0) {
-                    
-                        suman += j;
-                    }
-                   // cout << suman << endl;
-                };
+            for (int i = 1; i <= n; i++) {
+
+                if (i %n == 0) {// verifica que i sea divisor de j
+
+                    suman += i;
+                }
+                // cout << suman << endl;
             };
-            for (int a = 1; a < m; a++) {
 
-                for (int b = 1; b <= a; b++) {
+            for (int j = 1; j < m; j++) {
 
-                    if (a % b == 0) {
+                    if (m % j == 0) {
 
-                        sumam += b;
+                        sumam += j;
                     }
                     // cout << suman << endl;
-                };
+                
             };
             if (suman == sumam) {
 
@@ -103,17 +100,25 @@ int main()
         };
               break;
         case 3: {
-            int num;
-            int fibo;
-            cout << "Ingrese el numero" << " ";
-            cin >> num;
-                for (int i = 0; i = num; i++) {
-                    cout << i;
-                    for (int j = 0; i <= i; j++) {
-                        cout << j;
-                        fibo = i + j;
-                    };
-                };
+            int n;
+            int m;
+            int num1 = 0;
+            int num2 = 1;
+            int fibo = num1 + num2;
+            cout << "Ingrese el lim de la serie" << " ";
+            cin >> n;
+            cout << "Ingrese el número para verificar si pertenece a la serie" << " ";
+            cin >> m;
+            while (fibo <= n) {
+
+                cout << ", " << num1 << ", " << num2 << ", " << fibo;
+                num1++;
+                num2++;
+            };
+
+
+            
+              
 
            
         };
