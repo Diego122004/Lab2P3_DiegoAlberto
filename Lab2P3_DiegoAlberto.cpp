@@ -20,9 +20,40 @@ int main()
             int n;
             int contDePrimos = 0;
             int contDeDiv = 0;
+            cout << "Ingrese un valor de n mayor a 1" << " ";
+            cin >> n;
+            while ( n != 0 && n >= 1) {
+              
+                if (n == 0) {
+                    cout << "El programa a terminado";
+                    break;
+                }
+               
 
-            do {
-                cout << "Ingrese un valor de n mayor a 1\n";
+                for (int i = 2; i < n; i++) {
+
+                    for (int j = 1; j <= i; j++) {
+
+                        if (i % j == 0) {
+                            contDeDiv++;
+                        }
+                    }
+                    if (contDeDiv == 2) {
+                        contDePrimos++;
+                    }
+                    contDeDiv = 0;
+                }
+
+                //cout << "El numero de primos en" <<" " << n << "Es " << " " << contDePrimos;
+
+
+
+                cout << "El numero de primos entre" << " " << "0" << " " << " y" << " " << n << " " << "es :" << contDePrimos << "\n";
+              
+            };
+
+           /* do {
+                cout << "Ingrese un valor de n mayor a 1"<<" ";
                 cin >> n;
 
                 for (int i = 2; i < n; i++) {
@@ -43,21 +74,41 @@ int main()
 
 
 
-                cout << "El numero de primos entre" << " " << "0" << " " << " y" << " " << n << " " << "Es " << contDePrimos << "\n";
+                cout << "El numero de primos entre" << " " << "0" << " " << " y" << " " << n << " " << "es :" << contDePrimos << "\n";
 
                 cout << "Ingrese un valor de n mayor a 1\n";
                 cin >> n;
 
-            } while (n <= 1 && n != 0 && n >= 1);
+            } while (n <= 1 && n != 0 && n >= 1);*/
 
-            if (n == 0) {
+           /* if (n == 0) {
                 cout << "El programa a terminado";
             }
-            break;
+            break;*/
         };
+              break;
 
         case 2: {
+            int n;
+            int m;
+            int suman =0;
+            int sumam;
+            cout << "ingrese el primer número:" << " " << endl;
+            cin >> n;
+            cout << "ingrese el segundo número:" << " " << endl;
+            cin >> m;
+            for (int i = 2; i < n; i++) {
 
+                for (int j = 1; j <= i; j++) {
+                
+                    if (i%j == 0) {
+                    
+                        suman += j;
+                    }
+                    cout << suman << endl;
+                };
+            };
+            
 
 
         };
