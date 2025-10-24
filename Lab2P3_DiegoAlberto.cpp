@@ -1,4 +1,4 @@
-// Lab2P3_DiegoAlberto.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
+﻿// Lab2P3_DiegoAlberto.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
 //
 
 #include <iostream>
@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "sapanish");
+    setlocale(LC_ALL, "spanish");
     int opcion;
     do {
         cout << "MENU" << endl;
@@ -107,7 +107,7 @@ int main()
             int fibo;
             cout << "Ingrese el numero" << " ";
             cin >> num;
-                for (int i = 1; i = num; i++) {
+                for (int i = 0; i = num; i++) {
                     cout << i;
                     for (int j = 0; i <= i; j++) {
                         cout << j;
